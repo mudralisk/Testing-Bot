@@ -114,7 +114,9 @@ async def 웃음벨(ctx):
 	'http://optimal.inven.co.kr/upload/2019/02/03/bbs/i14345778726.gif',
 	'http://optimal.inven.co.kr/upload/2019/02/03/bbs/i15424464768.gif',
 	'http://optimal.inven.co.kr/upload/2019/02/03/bbs/i14433790812.gif']
-	await ctx.send(f'{random.choice(imglink)}')                
+ 	embed = discord.Embed()
+	embed.set_image(url={random.choice(imglink)})
+	await ctx.send(embed = embed)           
 
 access_token = os.environ["BOT.TOKEN"]
 client.run(access_token)
