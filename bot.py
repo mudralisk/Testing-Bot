@@ -103,7 +103,7 @@ async def _Union(ctx, level: int):
         await ctx.send(embed=embed)
 
     if level >= 140:
-        embed = discord.Embed(title="Error",description="140넘었으면 알아서 좀 하렴", color = 0xff0000)
+        embed = discord.Embed(title="Error",description="140넘었으면 알아서 좀 하렴.", color = 0xff0000)
         await ctx.send(embed=embed)
 
 
