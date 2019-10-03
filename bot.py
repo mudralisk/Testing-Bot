@@ -12,6 +12,19 @@ async def on_ready():
     await client.change_presence(status=discord.Status.idle, activity=discord.Game('일하는척'))
     print('Bot is ready.')
 
+@client.command(aliases=['웃음벨'])
+async def _Kaiser():
+    embed = discord.Embed(title='갤주님')
+    kaiserlink = ['url=http://optimal.inven.co.kr/upload/2019/02/03/bbs/i14616872306.gif',
+                    'url=http://optimal.inven.co.kr/upload/2019/02/03/bbs/i15748583659.gif',
+                    'url=http://optimal.inven.co.kr/upload/2019/02/03/bbs/i14345778726.gif',
+                    'url=http://optimal.inven.co.kr/upload/2019/02/03/bbs/i15424464768.gif',
+                    'url=http://optimal.inven.co.kr/upload/2019/02/03/bbs/i14433790812.gif']
+    embed = discord.Embed(title='갤주님')
+    embed.set_image({random.choice(kaiserlink)})
+    await ctx.send(embed = embed)
+                        
+
 @client.command(aliases=['소라고둥','Que'])
 async def _sora(ctx, * , question):
     responses = ['안돼.',
