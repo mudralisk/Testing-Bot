@@ -114,7 +114,7 @@ async def _kaiser():
 	'http://optimal.inven.co.kr/upload/2019/02/03/bbs/i14345778726.gif',
 	'http://optimal.inven.co.kr/upload/2019/02/03/bbs/i15424464768.gif',
 	'http://optimal.inven.co.kr/upload/2019/02/03/bbs/i14433790812.gif']
-	ctx.send('f{random.choice(imglink)})                
+	ctx.send('f{random.choice(imglink)}')                
 
 access_token = os.environ["BOT.TOKEN"]
 client.run(access_token)
