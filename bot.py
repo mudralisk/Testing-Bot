@@ -13,7 +13,7 @@ async def on_ready():
     print('Bot is ready.')
 
 @client.command(aliases=['소라고둥','Que'])
-async def _소라고둥(ctx, * , question):
+async def _sora(ctx, * , question):
     responses = ['안돼.',
                  '안.돼.',
                  '당연하지.',
@@ -30,8 +30,8 @@ async def _소라고둥(ctx, * , question):
     await ctx.send(f'뭐? {question} 라고? \n{random.choice(responses)}')
 
 
-@client.command(aliases=['테스트'])
-async def _유니온(ctx, level: int):
+@client.command(aliases=['유니온'])
+async def _Union(ctx, level: int):
     if level <= 0:
         embed = discord.Embed(title="Error",description="0레벨이 어딨노 시발련ㄴ아", color = 0xff0000)
         await ctx.send(embed=embed)
