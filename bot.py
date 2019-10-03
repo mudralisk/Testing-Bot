@@ -109,14 +109,14 @@ async def _Union(ctx, level: int):
 
 @client.command(aliases=['웃음벨'])
 async def _Kaiser():
-	imglink = ["http://optimal.inven.co.kr/upload/2019/02/03/bbs/i14616872306.gif",
+imglink = ["http://optimal.inven.co.kr/upload/2019/02/03/bbs/i14616872306.gif",
     "http://optimal.inven.co.kr/upload/2019/02/03/bbs/i15748583659.gif",
     "http://optimal.inven.co.kr/upload/2019/02/03/bbs/i14345778726.gif",
     "http://optimal.inven.co.kr/upload/2019/02/03/bbs/i15424464768.gif",
     "http://optimal.inven.co.kr/upload/2019/02/03/bbs/i14433790812.gif"]
-    embed = discord.Embed()
-    embed.set_image(url={random.choice(imglink)})
-    await ctx.send(embed = embed)
+embed = discord.Embed()
+
+await.ctx.send({random.choice(imglink)})
                         
 
 access_token = os.environ["BOT.TOKEN"]
