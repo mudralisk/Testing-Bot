@@ -106,16 +106,7 @@ async def _Union(ctx, level: int):
         embed = discord.Embed(title="Error",description="140넘었으면 독립좀 하렴", color = 0xff0000)
         await ctx.send(embed=embed)
 
-@client.command(aliases=['웃음벨'])
-async def _Kaiser():
-	kaiserlink = ["http://optimal.inven.co.kr/upload/2019/02/03/bbs/i14616872306.gif",
-    "http://optimal.inven.co.kr/upload/2019/02/03/bbs/i15748583659.gif",
-    "http://optimal.inven.co.kr/upload/2019/02/03/bbs/i14345778726.gif",
-    "http://optimal.inven.co.kr/upload/2019/02/03/bbs/i15424464768.gif",
-    "http://optimal.inven.co.kr/upload/2019/02/03/bbs/i14433790812.gif"]
-    embed = discord.Embed()
-    embed.set_image(url={random.choice(kaiserlink)})
-    await ctx.send(embed = embed)
+
                         
 
 access_token = os.environ["BOT.TOKEN"]
