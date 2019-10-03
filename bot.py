@@ -108,7 +108,7 @@ async def _Union(ctx, level: int):
 
 
 @client.command(aliases=['bell'])
-async def _kaiser(ctx, *, whatever):
+async def _kaiser():
 	imglink = ['http://optimal.inven.co.kr/upload/2019/02/03/bbs/i14616872306.gif',
 	'http://optimal.inven.co.kr/upload/2019/02/03/bbs/i15748583659.gif',
 	'http://optimal.inven.co.kr/upload/2019/02/03/bbs/i14345778726.gif',
