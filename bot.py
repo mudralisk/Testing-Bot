@@ -14,13 +14,13 @@ async def on_ready():
 
 @client.command(aliases=['웃음벨'])
 async def _Kaiser():
-	kaiserlink = ['url=http://optimal.inven.co.kr/upload/2019/02/03/bbs/i14616872306.gif',
-    'url="http://optimal.inven.co.kr/upload/2019/02/03/bbs/i15748583659.gif"',
-    'url="http://optimal.inven.co.kr/upload/2019/02/03/bbs/i14345778726.gif"',
-    'url="http://optimal.inven.co.kr/upload/2019/02/03/bbs/i15424464768.gif"',
-    '"url=http://optimal.inven.co.kr/upload/2019/02/03/bbs/i14433790812.gif"']
+	kaiserlink = ["http://optimal.inven.co.kr/upload/2019/02/03/bbs/i14616872306.gif",
+    "http://optimal.inven.co.kr/upload/2019/02/03/bbs/i15748583659.gif",
+    "http://optimal.inven.co.kr/upload/2019/02/03/bbs/i14345778726.gif",
+    "http://optimal.inven.co.kr/upload/2019/02/03/bbs/i15424464768.gif",
+    "http://optimal.inven.co.kr/upload/2019/02/03/bbs/i14433790812.gif"]
     embed = discord.Embed()
-    embed.set_image({random.choice(kaiserlink)})
+    embed.set_image(url={random.choice(kaiserlink)})
     await ctx.send(embed = embed)
                         
 
@@ -113,7 +113,7 @@ async def _Union(ctx, level: int):
         await ctx.send(embed=embed)
 
     if level >= 140:
-        embed = discord.Embed(title="Error",description="알아서해 시발련ㄴ아", color = 0xff0000)
+        embed = discord.Embed(title="Error",description="140이후의 정보는 없습니다", color = 0xff0000)
         await ctx.send(embed=embed)
 
 access_token = os.environ["BOT.TOKEN"]
