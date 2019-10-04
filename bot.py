@@ -20,7 +20,7 @@ async def _rollingdice(ctx, mnnum: int, mxnum: int):
         await ctx.send(embed=embed)
     else:
         roll = randint(mnnum,mxnum)
-        embed = discord.Embed(title="주사위 결과",description=f'{mnnum}~{mxnum}의 주사위결과 {roll}이 나왔습니다.',color=0x00ff00)
+        embed = discord.Embed(title="주사위 결과",description='{mnnum}~{mxnum}의 주사위결과 {roll}이 나왔습니다.',color=0x00ff00)
         await ctx.send(embed=embed)
 
 
