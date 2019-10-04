@@ -17,7 +17,11 @@ async def _dice(ctx, minnum: int, maxnum: int):
     if minnum >= maxnum:
         embed = discord.Embed(title="Error",description="주사위의 최솟값이 최댓값보다 크거나 같습니다!",color=0xff0000)
         await ctx.send(embed=embed)
-    
+     else:
+        roll = random.randint('minnum','maxnum')
+        embed = discord.Embed(title="주사위 결과",descrpiton="'minnum'-'maxnum'사이의 주사위결과 'roll'이 나왔습니다.",color=0x00ff00)
+        await ctx.send(embed=embed)
+
 @client.command(aliases=['test'])
 async def _test(ctx, mnnum, mxnum):
     if mnnum >= maxnum:
@@ -27,10 +31,7 @@ async def _test(ctx, mnnum, mxnum):
         roll = random.randint({mnnum},{maxnum})
         await ctx.send(f'{roll}')
 
-    else:
-        roll = random.randint('minnum','maxnum')
-        embed = discord.Embed(title="주사위 결과",descrpiton="'minnum'-'maxnum'사이의 주사위결과 'roll'이 나왔습니다.",color=0x00ff00)
-        await ctx.send(embed=embed)
+
 
 @client.command(aliases=['소라고둥'])
 async def _sora(ctx, *, question):
