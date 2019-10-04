@@ -16,11 +16,11 @@ async def on_ready():
 @client.command(aliases=['주사위'])
 async def _rollingdice(ctx, mnnum: int, mxnum: int):
     if mnnum >= mxnum:
-        embed = discord.Embed(title="Error",description="최댓값이 최솟값보다 작거나 같습니다!",color=0xff0000)
+        embed = discord.Embed(title="Error",description="최솟값이 최댓값보다 크거나 같습니다!",color=0xff0000)
         await ctx.send(embed=embed)
     else:
         roll = randint(mnnum,mxnum)
-        embed = discord.Embed(title="주사위 결과",description='{mnnum}~{mxnum}의 주사위결과 {roll}이 나왔습니다.',color=0x00ff00)
+        embed = discord.Embed(title="주사위 결과",description="{mnnum}~{mxnum}의 주사위결과 {roll}이 나왔습니다.",color=0x00ff00)
         await ctx.send(embed=embed)
 
 
