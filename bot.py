@@ -2,6 +2,7 @@
 import discord
 import random
 import os
+from random import randint
 from discord.ext import commands
 
 client = commands.Bot(command_prefix = '.')
@@ -18,9 +19,10 @@ async def _rollingdice(ctx, mnnum: int, mxnum: int):
     if mnnum >= mxnum:
         embed = discord.Embed(title="Error",description="최솟값이 최댓값보다 크거나 같습니다!",color=0xff0000)
         await ctx.send(embed=embed)
-    if mnnum < mxnum:
+    else:
         roll = randint(mnnum,mxnum)
-        await ctx.send(f'{roll}이 나왔습니다')
+        embed = discord.Embed(title="주사위 결과",description=f'{mnnum}~{mxnum}의 주사위결과 {roll}이 나왔습니다.',color=0x00ff00)
+        await ctx.send(embed=embed)
 
 
 @client.command(aliases=['소라고둥'])
