@@ -13,9 +13,8 @@ async def on_ready():
     print('Bot is ready.')
 
 
-
-@client.command(aliases=['소라고둥','Que'])
-async def _sora(ctx, * , question):
+@client.command(aliases=['소라고둥'])
+async def _sora(ctx, *, question):
     responses = ['안돼.',
                  '안.돼.',
                  '당연하지.',
@@ -23,14 +22,13 @@ async def _sora(ctx, * , question):
                  '아마도.',
                  '그래.',
                  '나중에 다시 물어봐.',
-                 '아직 때가 아냐.',
+                 '아직 말해줄 때가 아냐.',
                  '말하기 싫어.',
                  '꿈도 꾸지마.',
                  '말도 안돼는 소리.',
                  '미쳤어?',
                  '싫어.']
     await ctx.send(f'뭐? {question} 라고? \n{random.choice(responses)}')
-
 
 @client.command(aliases=['유니온'])
 async def _Union(ctx, level: int):
@@ -106,16 +104,34 @@ async def _Union(ctx, level: int):
         embed = discord.Embed(title="Error",description="140넘었으면 알아서 좀 해", color = 0xff0000)
         await ctx.send(embed=embed)
 
-
 @client.command()
 async def 웃음벨(ctx):
-	imglink = ['http://optimal.inven.co.kr/upload/2019/02/03/bbs/i14616872306.gif',
-	'http://optimal.inven.co.kr/upload/2019/02/03/bbs/i15748583659.gif',
-	'http://optimal.inven.co.kr/upload/2019/02/03/bbs/i14345778726.gif',
-	'http://optimal.inven.co.kr/upload/2019/02/03/bbs/i15424464768.gif',
-	'http://optimal.inven.co.kr/upload/2019/02/03/bbs/i14433790812.gif']
-        embed = discord.Embed()
-        await ctx.send(embed=embed)
+    imglink = ['http://optimal.inven.co.kr/upload/2018/09/22/bbs/i13124364945.gif',
+               'http://optimal.inven.co.kr/upload/2018/09/22/bbs/i15492514146.gif',
+               'http://optimal.inven.co.kr/upload/2018/09/22/bbs/i13539237870.gif',
+               'http://upload2.inven.co.kr/upload/2019/02/03/bbs/i15934695138.gif',
+               'http://optimal.inven.co.kr/upload/2019/02/03/bbs/i14616872306.gif',
+               'http://optimal.inven.co.kr/upload/2019/02/03/bbs/i15748583659.gif',
+               'http://optimal.inven.co.kr/upload/2019/02/03/bbs/i14345778726.gif',
+               'http://optimal.inven.co.kr/upload/2019/02/03/bbs/i15424464768.gif',
+               'http://optimal.inven.co.kr/upload/2019/02/03/bbs/i14433790812.gif',
+               'http://optimal.inven.co.kr/upload/2019/01/16/bbs/i14763356644.gif',
+               'http://upload2.inven.co.kr/upload/2019/01/16/bbs/i14400997593.gif',
+               'http://optimal.inven.co.kr/upload/2018/10/22/bbs/i16219842776.gif',
+               'http://optimal.inven.co.kr/upload/2018/10/20/bbs/i13572612956.gif',
+               'http://upload2.inven.co.kr/upload/2018/10/20/bbs/i14180300035.gif',
+               'https://cdn.discordapp.com/attachments/629555651689054244/629567555719135232/maplestory-20191004-153613-000.gif',
+               'https://cdn.discordapp.com/attachments/629555651689054244/629567571867336704/maplestory-20191004-153604-000.gif',
+               'https://cdn.discordapp.com/attachments/629555651689054244/629567627626545162/maplestory-20191004-153215-000.gif',
+               'https://cdn.discordapp.com/attachments/629555651689054244/629567643195539466/maplestory-20191004-153041-000.gif',
+               'https://cdn.discordapp.com/attachments/629555651689054244/629567669259075584/maplestory-20191004-152833-000.gif',
+               'https://cdn.discordapp.com/attachments/629555651689054244/629569545731964928/Honeycam_2019-09-29_23-01-05.gif',
+               'https://cdn.discordapp.com/attachments/629555651689054244/629569549150191626/Honeycam_2019-10-04_15-44-00.gif',
+               'https://cdn.discordapp.com/attachments/629555651689054244/629569548076449802/Honeycam_2019-10-04_15-43-36.gif']
+    chosen_image = random.choice(imglink)
+    embed = discord.Embed()
+    embed.set_image(url=chosen_image)
+    await ctx.send(embed=embed)
 
 access_token = os.environ["BOT.TOKEN"]
 client.run(access_token)
