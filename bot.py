@@ -17,6 +17,15 @@ async def _dice(ctx, minnum: int, maxnum: int):
     if minnum >= maxnum:
         embed = discord.Embed(title="Error",description="주사위의 최솟값이 최댓값보다 크거나 같습니다!",color=0xff0000)
         await ctx.send(embed=embed)
+    
+@client.command(aliases=['test'])
+async def _test(ctx, mnnum, mxnum):
+    if mnnum >= maxnum:
+        embed = discord.Embed(title="np")
+        await ctx.send(embed=embed)
+    else:
+        roll = random.randint({mnnum},{maxnum})
+        await ctx.send(f'{roll}')
 
     else:
         roll = random.randint('minnum','maxnum')
