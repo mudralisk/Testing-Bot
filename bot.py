@@ -124,7 +124,9 @@ async def 웃음벨(ctx):
                'https://cdn.discordapp.com/attachments/629555651689054244/629567669259075584/maplestory-20191004-152833-000.gif',
                'https://cdn.discordapp.com/attachments/629555651689054244/629573808319103006/Honeycam_2019-10-04_15-53-31.gif',
                'https://cdn.discordapp.com/attachments/629555651689054244/629569549150191626/Honeycam_2019-10-04_15-44-00.gif',
-               'https://cdn.discordapp.com/attachments/629555651689054244/629569548076449802/Honeycam_2019-10-04_15-43-36.gif']
+               'https://cdn.discordapp.com/attachments/629555651689054244/629569548076449802/Honeycam_2019-10-04_15-43-36.gif',
+               'https://cdn.discordapp.com/attachments/598167258832830467/629625292327092225/i14013796794.gif',
+               'https://cdn.discordapp.com/attachments/598167258832830467/629625411797778432/i15715196150.gif']
     chosen_image = random.choice(imglink)
     embed = discord.Embed()
     embed.set_image(url=chosen_image)
