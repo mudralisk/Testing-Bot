@@ -150,8 +150,16 @@ async def filtering(ctx):
 	ctx.replace("tlqkf","dlfjs")
 	await client.edit_message(ctx)
 
+@client.event
+async def on_message(message):
+	contents = message.content.split(" ")
+	for word in contents:
+		if word.upper() in filter_test:
+			try:
+				await client.delete_message(message)
+			except discord.errors.NotFound:
+				return
 
 
 access_token = os.environ["BOT.TOKEN"]
 client.run(access_token)
-
