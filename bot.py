@@ -8,6 +8,8 @@ from discord.ext import commands
 client = commands.Bot(command_prefix = '.')
 channel = client.get_channel("channel id")
 
+filter_test = ["tlqkf","whssk"]
+
 @client.event
 async def on_ready():
     await client.change_presence(status=discord.Status.idle, activity=discord.Game('일하는척'))
