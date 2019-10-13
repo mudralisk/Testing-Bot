@@ -144,5 +144,14 @@ async def 웃음벨(ctx):
     embed.set_image(url=chosen_image)
     await ctx.send(embed=embed)
 
+@client.command(pass_context=True)
+async def filtering(ctx):
+	await cilent.say('tlqkd')
+	ctx.replace("tlqkf","dlfjs")
+	await client.edit_message(ctx)
+
+
+
 access_token = os.environ["BOT.TOKEN"]
 client.run(access_token)
+
