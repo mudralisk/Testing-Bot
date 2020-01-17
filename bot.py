@@ -117,6 +117,102 @@ async def _Union(ctx, level: int):
     if level >= 140:
         embed = discord.Embed(title="Error",description="140넘었으면 알아서 좀 해", color = 0xff0000)
         await ctx.send(embed=embed)
+        
+        
+@client.command(aliases=['유니온사기캐'])
+async def _Union(ctx, level: int):
+    if level <= 0:
+        embed = discord.Embed(title="Error",description="0레벨이 어딨노 시발련ㄴ아", color = 0xff0000)
+        await ctx.send(embed=embed)
+
+    if level > 0 and level < 30:
+        embed = discord.Embed(title="유니온 1~30레벨",description="머쉬맘,블루머쉬맘", color = 0x00ff00)
+        await ctx.send(embed=embed)
+        
+    if level >= 30 and level < 35:
+        embed = discord.Embed(title="유니온 30~35레벨",description="골드비치 퀘스트 진행", color = 0x00ff00)
+        await ctx.send(embed=embed)
+
+    if level >= 35 and level < 42:
+        embed = discord.Embed(title="유니온 35~42레벨",description="와일드보어의 땅\n사냥중 룬을 깠다면 46레벨까지 와일드보어의 땅에서 진행", color = 0x00ff00)
+        await ctx.send(embed=embed)
+
+    if level >= 42 and level < 46:
+        embed = discord.Embed(
+            title = '유니온 42~46레벨',
+            description = '제1군영',
+            colour = discord.Colour.green()
+            )        
+        await ctx.send(embed=embed) 
+            
+    if level >= 46 and level < 51:
+        embed = discord.Embed(title="유니온 46~51레벨",description="조용한습지 카파드레이크", color = 0x00ff00)
+        await ctx.send(embed=embed)
+
+    if level >= 51 and level < 59: 
+        embed = discord.Embed(title="유니온 51~59레벨",description="하늘계단1\n하늘계단에서의 사냥능력이 좋지않은직업(클레릭등)이라면 조용한습지", color = 0x00ff00)
+        await ctx.send(embed=embed)
+
+    if level >= 59 and level < 61:
+        embed = discord.Embed(title="유니온 59~61레벨",description="경뿌,룬을 받은뒤 이지자쿰", color = 0x00ff00)
+        await ctx.send(embed=embed)
+
+    if level >= 61 and level < 70:
+        embed = discord.Embed(title="유니온 61~70레벨",description="얼음골짜기2", color = 0x00ff00)
+        await ctx.send(embed=embed)
+
+    if level >= 70 and level < 75:
+        embed = discord.Embed(title="유니온 70~75레벨",description="사헬지대2", color = 0x00ff00)
+        await ctx.send(embed=embed)
+
+    if level >= 75 and level < 80:
+        embed = discord.Embed(title="유니온 75~80레벨",description="관계자외 출입금지", color = 0x00ff00)
+        await ctx.send(embed=embed)
+
+    if level >= 80 and level < 88:
+        embed = discord.Embed(title="유니온 80~88레벨",description="엘린숲 이끼나무숲 오솔길\n텔마원킬 법사류나 스커같은 일자맵 사냥효율이 좋은직업이나 여기서의 사냥이 좋지않다면 관계자외 출입금지", color = 0x00ff00)
+        await ctx.send(embed=embed)
+
+    if level >= 88 and level < 101:
+        embed = discord.Embed(title="유니온 88~101레벨",description="하늘둥지2", color = 0x00ff00)
+        await ctx.send(embed=embed)
+
+    if level >= 101 and level < 116:
+        embed = discord.Embed(title="유니온 101~116레벨",description="뒤틀린 회랑이나 잊혀진회랑중 버닝높은곳", color = 0x00ff00)
+        await ctx.send(embed=embed)
+
+    if level >= 116 and level < 135:
+        embed = discord.Embed(title="유니온 116~135레벨",description="시련의동굴3", color = 0x00ff00)
+        await ctx.send(embed=embed)
+
+    if level >= 135 and level < 141:
+        embed = discord.Embed(title="유니온 135~141레벨",description="커닝타워 2층 커피포트(스타포스존)", color = 0x00ff00)
+        await ctx.send(embed=embed)
+
+    if level >= 141 and level < 160:
+        embed = discord.Embed(title="유니온 141~160레벨",description="커닝타워 5층 화장대(스타포스존)", color = 0x00ff00)
+        await ctx.send(embed=embed)
+
+    if level >= 160 and level < 180:
+        embed = discord.Embed(title="유니온 160~180레벨",description="지구방위본부 복도 H01~H03중 버닝높은곳", color = 0x00ff00)
+        await ctx.send(embed=embed)
+
+    if level >= 180 and level < 190:
+        embed = discord.Embed(title="유니온 180~190레벨",description="황혼의 페리온\n버발지2,4\n전결지\n거친황야\n저중에 버닝높고 지형맞는곳 골라서", color = 0x00ff00)
+        await ctx.send(embed=embed)
+
+    if level >= 190 and level < 193:
+        embed = discord.Embed(title="유니온 190~193레벨",description="헤이븐 스토리퀘,주간퀘", color = 0x00ff00)
+        await ctx.send(embed=embed)
+
+    if level >= 193 and level < 200:
+        embed = discord.Embed(title="유니온 193~200레벨",description="기계무덤 3,5또는 상하차알바구해서 스올길", color = 0x00ff00)
+        await ctx.send(embed=embed)
+
+    if level >= 200:
+        embed = discord.Embed(title="Error",description="200넘었으면 알아서 좀 해", color = 0xff0000)
+        await ctx.send(embed=embed)
+
 
 @client.command()
 async def 웃음벨(ctx):
