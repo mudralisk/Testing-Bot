@@ -8,7 +8,6 @@ from discord.ext import commands
 client = commands.Bot(command_prefix = '.')
 channel = client.get_channel("channel id")
 
-filter_test = ["tlqkf","whssk"]
 
 @client.event
 async def on_ready():
@@ -120,7 +119,7 @@ async def _Union(ctx, level: int):
         
         
 @client.command(aliases=['유니온사기캐'])
-async def _Union(ctx, level: int):
+async def _Uniontwo(ctx, level: int):
     if level <= 0:
         embed = discord.Embed(title="Error",description="0레벨이 어딨노 시발련ㄴ아", color = 0xff0000)
         await ctx.send(embed=embed)
